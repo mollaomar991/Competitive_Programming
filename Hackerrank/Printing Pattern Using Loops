@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int n,i,j;
+    scanf("%d", &n);
+
+    int mid = 2*n - 1;
+    for (i = 0; i < mid; i++) {
+        for ( j = 0; j < mid; j++) {
+            int min = i < j ? i : j;
+            min = min < mid-i ? min : len-i-1;
+            min = min < mid-j-1 ? min : len-j-1;
+            printf("%d ", n-min);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
